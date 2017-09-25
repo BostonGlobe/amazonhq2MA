@@ -77,3 +77,6 @@ div.leaflet-popup-content p span {
 	font-weight: bold;
 	color: #48a3c6;
 }
+div.leaflet-popup-content p img{
+	width: 280px;
+}
