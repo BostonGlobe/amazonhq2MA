@@ -88,7 +88,7 @@
 
 
 	sites.forEach(function (t) {
-		L.marker ([t.siteLat, t.siteLng]).bindPopup('<p><span>'+ t.site +'</span><br/>Descriptions: '+ t.siteInfo+'<br/>Commute option: '+t.transit +'</p>').openPopup().addTo(map);
+		L.marker ([t.siteLat, t.siteLng]).bindPopup('<p><span>'+ t.site +'</span><br/>Descriptions: '+ t.siteInfo+'</p>').openPopup().addTo(map);
 	});
 
     var shpfile = new L.Shapefile('assets/towns.zip', {
