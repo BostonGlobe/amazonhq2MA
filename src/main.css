@@ -80,3 +80,25 @@ div.leaflet-popup-content p span {
 div.leaflet-popup-content p img{
 	width: 280px;
 }
+div.info.legend.leaflet-control img{
+	height: 20px;
+}
+.leaflet-right .leaflet-control {
+	width: 250px;
+	padding: 6px 8px;
+	font: 14px/16px Arial, Helvetica, sans-serif;
+	background: white;
+	background: rgba(255,255,255,0.8);
+	box-shadow: 0 0 15px rgba(0,0,0,0.2);
+	border-radius: 5px;
+}
+.info h4 {
+	margin: 0 0 5px;
+	color: #2677a2;
+	font-weight: bold;
+}
+.info p {
+	margin: 0 0 5px;
+	color: #000000;
+	font-weight: lighter;
+}

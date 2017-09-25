@@ -2,7 +2,7 @@
 (function() {
 	// global variables
     var wWidth = window.innerWidth;
-
+    var legendPosition= {position: 'topright'};
 
 	// called once on page load
 	var init = function() {
@@ -32,21 +32,21 @@
         {"city":"Lawrence","part":3,"mayor":null,"cityInfo":"Plan to file a regional bid with two other cities.","site":"Former Showcase Cinema property","siteLat":"42.689130","siteLng":"-71.143711","siteInfo":"It's a 14-acre city-owned lot.","transit":"Commuter rail stop in Lawrence","id":1},
         {"city":"North Andover","part":3,"mayor":null,"cityInfo":"Plan to file a regional bid with two other cities.","site":"Osgood Landing office","siteLat":"42.73107","siteLng":"-71.114405","siteInfo":"It's 168-parcel along the Merrimack River, the former AT&T/Lucent Technologies manufacturing complex.","transit":"Commuter rail stop in Lawrence","id":1},
         {"city":"New Bedford","part":1,"mayor":null,"cityInfo":"Strongly considering a bid","site":"Whaling City Golf Course","siteLat":"41.658893","siteLng":"-70.957943","siteInfo":"It's a 300-acre property owned by the city and that is slated for redevelopment","transit":"Bus","id":2},
-        {"city":"Westfield","part":9,"mayor":null,"cityInfo":"Weighing regional bid involving nine cities organized by <br/>the Economic Development Council of Western Massachusetts. ","site":"","siteLat":"null","siteLng":"null","siteInfo":"Potential sites to be determined.","transit":"Bus","id":3},
-        {"city":"Springfield","part":9,"mayor":null,"cityInfo":"Weighing regional bid involving nine cities organized by <br/>the Economic Development Council of Western Massachusetts. ","site":"","siteLat":"null","siteLng":"null","siteInfo":"Potential sites to be determined.","transit":"Bus","id":3},
-        {"city":"Holyoke","part":9,"mayor":null,"cityInfo":"Weighing regional bid involving nine cities organized by <br/>the Economic Development Council of Western Massachusetts. ","site":"","siteLat":"null","siteLng":"null","siteInfo":"Potential sites to be determined.","transit":"Bus","id":3},
-        {"city":"Chicopee","part":9,"mayor":null,"cityInfo":"Weighing regional bid involving nine cities organized by <br/>the Economic Development Council of Western Massachusetts. ","site":"","siteLat":"null","siteLng":"null","siteInfo":"Potential sites to be determined.","transit":"Bus","id":3},
-        {"city":"Agawam","part":9,"mayor":null,"cityInfo":"Weighing regional bid involving nine cities organized by <br/>the Economic Development Council of Western Massachusetts. ","site":"","siteLat":"null","siteLng":"null","siteInfo":"Potential sites to be determined.","transit":"Bus","id":3},
-        {"city":"West Springfield","part":9,"mayor":null,"cityInfo":"Weighing regional bid involving nine cities organized by <br/>the Economic Development Council of Western Massachusetts. ","site":"","siteLat":"null","siteLng":"null","siteInfo":"Potential sites to be determined.","transit":"Bus","id":3},
-        {"city":"Northampton","part":9,"mayor":null,"cityInfo":"Weighing regional bid involving nine cities organized by <br/>the Economic Development Council of Western Massachusetts. ","site":"","siteLat":"null","siteLng":"null","siteInfo":"Potential sites to be determined.","transit":"Bus","id":3},
-        {"city":"Greenfield","part":9,"mayor":null,"cityInfo":"Weighing regional bid involving nine cities organized by <br/>the Economic Development Council of Western Massachusetts. ","site":"","siteLat":"null","siteLng":"null","siteInfo":"Potential sites to be determined.","transit":"Bus","id":3},
-        {"city":"Easthampton","part":9,"mayor":null,"cityInfo":"Weighing regional bid involving nine cities organized by <br/>the Economic Development Council of Western Massachusetts. ","site":"","siteLat":"null","siteLng":"null","siteInfo":"Potential sites to be determined.","transit":"Bus","id":3},
-        {"city":"Rockland","part":3,"mayor":null,"cityInfo":"Plan to file a regional bid with two other cities.","site":"","siteLat":"null","siteLng":"null","siteInfo":"","transit":"Commuter rail stop at Union Point","id":4},
-        {"city":"Weymouth","part":3,"mayor":null,"cityInfo":"Plan to file a regional bid with two other cities.","site":"Union Point","siteLat":"42.165521","siteLng":"-70.938159","siteInfo":"The former South Weymouth naval base that sits on 1,500 acres and straddles three towns. Being turned into a mega development featuring offices, housing, and amenities like restaurants.","transit":"Commuter rail stop at Union Point","id":4},
-        {"city":"Abington","part":3,"mayor":null,"cityInfo":"Plan to file a regional bid with two other cities.","site":"","siteLat":"null","siteLng":"null","siteInfo":"","transit":"Commuter rail stop at Union Point","id":4},
+        {"city":"Westfield","part":9,"mayor":null,"cityInfo":"Weighing regional bid involving nine cities organized by the Economic Development Council of Western Massachusetts. ","site":"","siteLat":"null","siteLng":"null","siteInfo":"Potential sites to be determined.","transit":"Bus","id":3},
+        {"city":"Springfield","part":9,"mayor":null,"cityInfo":"Weighing regional bid involving nine cities organized by the Economic Development Council of Western Massachusetts. ","site":"","siteLat":"null","siteLng":"null","siteInfo":"Potential sites to be determined.","transit":"Bus","id":3},
+        {"city":"Holyoke","part":9,"mayor":null,"cityInfo":"Weighing regional bid involving nine cities organized by the Economic Development Council of Western Massachusetts. ","site":"","siteLat":"null","siteLng":"null","siteInfo":"Potential sites to be determined.","transit":"Bus","id":3},
+        {"city":"Chicopee","part":9,"mayor":null,"cityInfo":"Weighing regional bid involving nine cities organized by the Economic Development Council of Western Massachusetts. ","site":"","siteLat":"null","siteLng":"null","siteInfo":"Potential sites to be determined.","transit":"Bus","id":3},
+        {"city":"Agawam","part":9,"mayor":null,"cityInfo":"Weighing regional bid involving nine cities organized by the Economic Development Council of Western Massachusetts. ","site":"","siteLat":"null","siteLng":"null","siteInfo":"Potential sites to be determined.","transit":"Bus","id":3},
+        {"city":"West Springfield","part":9,"mayor":null,"cityInfo":"Weighing regional bid involving nine cities organized by the Economic Development Council of Western Massachusetts. ","site":"","siteLat":"null","siteLng":"null","siteInfo":"Potential sites to be determined.","transit":"Bus","id":3},
+        {"city":"Northampton","part":9,"mayor":null,"cityInfo":"Weighing regional bid involving nine cities organized by the Economic Development Council of Western Massachusetts. ","site":"","siteLat":"null","siteLng":"null","siteInfo":"Potential sites to be determined.","transit":"Bus","id":3},
+        {"city":"Greenfield","part":9,"mayor":null,"cityInfo":"Weighing regional bid involving nine cities organized by the Economic Development Council of Western Massachusetts. ","site":"","siteLat":"null","siteLng":"null","siteInfo":"Potential sites to be determined.","transit":"Bus","id":3},
+        {"city":"Easthampton","part":9,"mayor":null,"cityInfo":"Weighing regional bid involving nine cities organized by the Economic Development Council of Western Massachusetts. ","site":"","siteLat":"null","siteLng":"null","siteInfo":"Potential sites to be determined.","transit":"Bus","id":3},
+        {"city":"Rockland","part":3,"mayor":null,"cityInfo":"Plan to file a regional bid with two other cities. The owner of Union Point is driving the bid.","site":"","siteLat":"null","siteLng":"null","siteInfo":"","transit":"Commuter rail stop at Union Point","id":4},
+        {"city":"Weymouth","part":3,"mayor":null,"cityInfo":"Plan to file a regional bid with two other cities. The owner of Union Point is driving the bid.","site":"Union Point","siteLat":"42.165521","siteLng":"-70.938159","siteInfo":"The former South Weymouth naval base that sits on 1,500 acres and straddles three towns. Being turned into a mega development featuring offices, housing, and amenities like restaurants.","transit":"Commuter rail stop at Union Point","id":4},
+        {"city":"Abington","part":3,"mayor":null,"cityInfo":"Plan to file a regional bid with two other cities. The owner of Union Point is driving the bid.","site":"","siteLat":"null","siteLng":"null","siteInfo":"","transit":"Commuter rail stop at Union Point","id":4},
         {"city":"Somerville","part":1,"mayor":null,"cityInfo":"It would need to be part of a regional bid.","site":"Assembly Square","siteLat":"42.392942","siteLng":"-71.080534","siteInfo":"It would need to be part of a regional bid","transit":"Orange Line ","id":5},
         {"city":"Worcester","part":1,"mayor":null,"cityInfo":"Hope to be part of state application.","site":"Gateway Park","siteLat":"42.273665","siteLng":"-71.806378","siteInfo":"a research-business development co-owned by Worcester Polytechnic Institute; CitySquare, downtown project next to Union Station","transit":"Commuter rail","id":6},
-        {"city":"Boston","part":1,"mayor":null,"cityInfo":"Plan to file a bid.","site":"Suffolk Downs","siteLat":"42.394576","siteLng":"-71.010499","siteInfo":"","transit":"Blue Line","id":7},
+        {"city":"Boston","part":1,"mayor":null,"cityInfo":"Plan to file a bid. <br/>Boston has multiple potential sites to consider, and Suffolk Downs in one of them.","site":"Suffolk Downs","siteLat":"42.394576","siteLng":"-71.010499","siteInfo":"","transit":"Blue Line","id":7},
         {"city":"Billerica","part":3,"mayor":null,"cityInfo":"Working on an application with two other cities.","site":"A collection of lots","siteLat":"42.609995","siteLng":"-71.291785","siteInfo":"It's off Billerica Avenue, near Baker Commodities and Commuter Rail.","transit":"Commuter Rail","id":8},
         {"city":"Tewksbury","part":3,"mayor":null,"cityInfo":"Working on an application with two other cities.","site":"","siteLat":"","siteLng":"","siteInfo":"","transit":"Commuter rail","id":8},
         {"city":"Lowell","part":3,"mayor":null,"cityInfo":"Working on an application with two other cities.","site":"","siteLat":"","siteLng":"","siteInfo":"","transit":"Commuter rail","id":8}];
@@ -64,7 +64,7 @@
             opacity: 0.3,
             color: '#987d66',
             dashArray: '3',
-            fillOpacity: 0.4
+            fillOpacity: 0.3
         };
     }
     // graphic code
@@ -74,6 +74,7 @@
     if(wWidth<= 720){
 
         map.setView([42.243, -71.872], 8);
+        legendPosition= {position: 'bottomleft'};
     } else {
         map.setView([42.243, -71.872], 9);
     }
@@ -97,10 +98,19 @@
     var shpfile = new L.Shapefile('assets/towns.zip', {
 
         style: function(feature) {
+            var styleChange=style();
         	if(feature.properties['TOWN']){
-                return isBidding(feature.properties['TOWN'])? {color: "#ff9900"}: style();
+        	    if(isBidding(feature.properties['TOWN'])){
+        	        var arr= getInfo(feature.properties['TOWN']);
+        	        if (arr.part==1){
+                        styleChange = {color: "#ff9900"};
+                    }else {
+                        styleChange = {color: "#2677a2"};
+                    }
+                }
+                return styleChange;
 			}
-            return style();
+            return styleChange;
         },
         onEachFeature: function(feature, layer) {
 
@@ -129,13 +139,38 @@
         this.update();
         return this._div;
     };
+    //add new legend
+
+
+
+    var legend = L.control(legendPosition);
+
+
+    var legendData = [{"img":"./assets/single.png", "title":"Single community bids"},
+        {"img":"./assets/multi.png", "title":"Multi-town bids"},
+        {"img":"./assets/marker-icon.png", "title":"Proposed sites (where offered)"}];
+    legend.onAdd = function (map) {
+
+        var div = L.DomUtil.create('div', 'info legend');
+        // loop through our density intervals and generate a label with a colored square for each interval
+        for (var i = 0; i < legendData.length; i++) {
+            div.innerHTML +=
+                '<img src="' + legendData[i].img + '"></img> ' +
+                legendData[i].title + (legendData[i+1] ? '<br>' : '');
+        }
+
+        return div;
+    };
+
+    legend.addTo(map);
+
 
 // method that we will use to update the control based on feature properties passed
     info.update = function (props) {
         //console.log(props);
         var obj= (props)? getInfo(props["TOWN"]):{info:"Hover over a town"};
-        this._div.innerHTML = '<h4>Which cities are bidding for Amazon HQ2? </h4>' +  (props ?
-            '<p>' + obj.city+'<br/>' + obj.cityInfo + haveSite(obj.id)+'</p>'
+        this._div.innerHTML = (props ?
+            '<h4>' + obj.city+'<h4/><p>' + obj.cityInfo + haveSite(obj.id)+'</p>'
             : obj.info);
     };
 
