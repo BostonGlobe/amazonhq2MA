@@ -84,7 +84,6 @@ div.info.legend.leaflet-control img{
 	height: 20px;
 }
 .leaflet-right .leaflet-control {
-	width: 250px;
 	padding: 6px 8px;
 	font: 14px/16px Arial, Helvetica, sans-serif;
 	background: white;
@@ -94,11 +93,17 @@ div.info.legend.leaflet-control img{
 }
 .info h4 {
 	margin: 0 0 5px;
-	color: #2677a2;
+	color: #987d66;
 	font-weight: bold;
 }
 .info p {
 	margin: 0 0 5px;
 	color: #000000;
 	font-weight: lighter;
+}
+div.info.leaflet-control{
+	width: 250px;
+}
+div.info.legend.leaflet-control{
+	width: 250px;
 }
